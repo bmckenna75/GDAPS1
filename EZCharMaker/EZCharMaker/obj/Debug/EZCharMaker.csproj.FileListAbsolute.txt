@@ -1,0 +1,6 @@
+Z:\IGMProfile\Desktop\GDAPS1\EZCharMaker\EZCharMaker\bin\Debug\EZCharMaker.exe.config
+Z:\IGMProfile\Desktop\GDAPS1\EZCharMaker\EZCharMaker\bin\Debug\EZCharMaker.exe
+Z:\IGMProfile\Desktop\GDAPS1\EZCharMaker\EZCharMaker\bin\Debug\EZCharMaker.pdb
+Z:\IGMProfile\Desktop\GDAPS1\EZCharMaker\EZCharMaker\obj\Debug\EZCharMaker.csprojResolveAssemblyReference.cache
+Z:\IGMProfile\Desktop\GDAPS1\EZCharMaker\EZCharMaker\obj\Debug\EZCharMaker.exe
+Z:\IGMProfile\Desktop\GDAPS1\EZCharMaker\EZCharMaker\obj\Debug\EZCharMaker.pdb
