@@ -1,0 +1,5 @@
+Z:\IGMProfile\Desktop\GDAPS\HelloWorldFirstAssignment\HelloWorldFirstAssignment\bin\Debug\HelloWorldFirstAssignment.exe.config
+Z:\IGMProfile\Desktop\GDAPS\HelloWorldFirstAssignment\HelloWorldFirstAssignment\bin\Debug\HelloWorldFirstAssignment.exe
+Z:\IGMProfile\Desktop\GDAPS\HelloWorldFirstAssignment\HelloWorldFirstAssignment\bin\Debug\HelloWorldFirstAssignment.pdb
+Z:\IGMProfile\Desktop\GDAPS\HelloWorldFirstAssignment\HelloWorldFirstAssignment\obj\Debug\HelloWorldFirstAssignment.exe
+Z:\IGMProfile\Desktop\GDAPS\HelloWorldFirstAssignment\HelloWorldFirstAssignment\obj\Debug\HelloWorldFirstAssignment.pdb

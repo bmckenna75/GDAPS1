@@ -1,0 +1,6 @@
+Z:\IGMProfile\Desktop\GDAPS\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache
+Z:\IGMProfile\Desktop\GDAPS\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+Z:\IGMProfile\Desktop\GDAPS\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+Z:\IGMProfile\Desktop\GDAPS\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+Z:\IGMProfile\Desktop\GDAPS\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+Z:\IGMProfile\Desktop\GDAPS\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
