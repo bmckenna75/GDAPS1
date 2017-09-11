@@ -1,0 +1,6 @@
+Z:\IGMProfile\Desktop\GDAPS1\ParsingandUSRInput\ParsingandUSRInput\bin\Debug\ParsingandUSRInput.exe.config
+Z:\IGMProfile\Desktop\GDAPS1\ParsingandUSRInput\ParsingandUSRInput\bin\Debug\ParsingandUSRInput.exe
+Z:\IGMProfile\Desktop\GDAPS1\ParsingandUSRInput\ParsingandUSRInput\bin\Debug\ParsingandUSRInput.pdb
+Z:\IGMProfile\Desktop\GDAPS1\ParsingandUSRInput\ParsingandUSRInput\obj\Debug\ParsingandUSRInput.csprojResolveAssemblyReference.cache
+Z:\IGMProfile\Desktop\GDAPS1\ParsingandUSRInput\ParsingandUSRInput\obj\Debug\ParsingandUSRInput.exe
+Z:\IGMProfile\Desktop\GDAPS1\ParsingandUSRInput\ParsingandUSRInput\obj\Debug\ParsingandUSRInput.pdb
