@@ -1,0 +1,6 @@
+Z:\IGMProfile\Desktop\GDAPS1\CastingandStrings\CastingandStrings\bin\Debug\CastingandStrings.exe.config
+Z:\IGMProfile\Desktop\GDAPS1\CastingandStrings\CastingandStrings\bin\Debug\CastingandStrings.exe
+Z:\IGMProfile\Desktop\GDAPS1\CastingandStrings\CastingandStrings\bin\Debug\CastingandStrings.pdb
+Z:\IGMProfile\Desktop\GDAPS1\CastingandStrings\CastingandStrings\obj\Debug\CastingandStrings.csprojResolveAssemblyReference.cache
+Z:\IGMProfile\Desktop\GDAPS1\CastingandStrings\CastingandStrings\obj\Debug\CastingandStrings.exe
+Z:\IGMProfile\Desktop\GDAPS1\CastingandStrings\CastingandStrings\obj\Debug\CastingandStrings.pdb
