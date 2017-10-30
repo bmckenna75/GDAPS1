@@ -11,7 +11,22 @@ namespace Homework5
         private bool focus = true;
         private int chargeLevel = 0;
         //constructer
-        public Archmage(Random r)
+
+
+        public Archmage(int h, int d, int s, int i, int aC, int cL, bool f, Random r)
+        {
+            health = h;
+            dexterity = d;
+            strength = s;
+            intelegence = i;
+            armorClass = aC;
+            chargeLevel = cL;
+            focus = f;
+            Roller = r;
+
+        }
+
+        public Archmage()
         {
             health = 10;
             dexterity = 13;
@@ -20,7 +35,7 @@ namespace Homework5
             armorClass = 14;
             chargeLevel = 0;
             focus = true;
-            Roller = r;
+            Roller = new Random();
         }
 
         public override string ToString()
@@ -76,7 +91,7 @@ namespace Homework5
                 int damage = 0;
                 for (int i = 0; i < 40; i++)
                 {
-                    damage += Roller.Damage();
+                    damage += Roller.Next(1,7);
                 }
                 return damage;
             }

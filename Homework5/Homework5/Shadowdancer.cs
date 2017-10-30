@@ -12,6 +12,22 @@ namespace Homework5
 
         protected bool stealth = false;
         protected bool highGround = true;
+
+        public Shadowdancer(int h, int d, int s, int i, int aC, bool Stealth, bool hG, Random r)
+        {
+            health = h;
+            dexterity = d;
+            strength = s;
+            intelegence = i;
+            armorClass = aC;
+            stealth = Stealth;
+            highGround = hG;
+            Roller = r;
+
+        }
+
+
+
         public Shadowdancer()
         {
             health = 11;
@@ -21,6 +37,7 @@ namespace Homework5
             armorClass = 13;
             stealth = false;
             highGround = true;
+            Roller = new Random();
         }
 
 
@@ -34,13 +51,13 @@ namespace Homework5
         //generic methods
         public int Attack(int defenderAC)
         {
-            if (Roller.TwentySided() >= defenderAC && !highGround)
+            if (Roller.Next(1,21) >= defenderAC && !highGround)
             {
-                return Roller.Damage();
+                return Roller.Next(1,7);
             }
-            else if (Roller.TwentySided() >= defenderAC && highGround)
+            else if (Roller.Next(1, 21) >= defenderAC && highGround)
             {
-                return (Roller.Damage() * 2);
+                return (Roller.Next(1,7) * 2);
             }
             else
             {
@@ -56,7 +73,7 @@ namespace Homework5
             }
             else
             {
-                if (Roller.UncannyDodge() == true)
+                if (Roller.Next(0, 10) >= 8)
                 {
                     Console.WriteLine("The shadowdancer steps back and dodges the attack with extreme speed and grace.");
                 }
