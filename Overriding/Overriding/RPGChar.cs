@@ -14,12 +14,8 @@ namespace Overriding
         protected int dexterity;
         protected int intelligence;
         protected int xp;
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        protected int level = 0;
+        protected Random rng = new Random();
         public int Strength
         {
             get { return strength; }
@@ -35,11 +31,8 @@ namespace Overriding
             get { return intelligence; }
             set { intelligence = value; }
         }
-        public int Xp
-        {
-            get { return xp; }
-            set { xp = value; }
-        }
+
+
 
 
 
@@ -58,10 +51,10 @@ namespace Overriding
 
         public override string ToString()
         {
-            return (name + " has " + strength + " points of strength, " + dexterity + " points of dexterity, " + intelligence + " points of intelligence, " + xp + " points of experience and");
+            return (name + " has " + strength + " points of strength, " + dexterity + " points of dexterity, " + intelligence + " points of intelligence,\n " + xp + " points of experience and ");
         }
 
-        public void GainXP(int exp)
+        public virtual void GainXP(int exp)
         {
             xp = xp + exp;
         }

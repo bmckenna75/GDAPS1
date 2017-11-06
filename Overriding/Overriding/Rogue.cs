@@ -15,6 +15,8 @@ namespace Overriding
             set { cellPhoneRings = value; }
         }
 
+        bool phoneSmash = false;
+
         //constructor
         public Rogue() : this("Carmen", 13, 15, 10, 0)
         {
@@ -25,12 +27,42 @@ namespace Overriding
             cellPhoneRings = cPR;
         }
 
-
+        //general things
         public override string ToString()
         {
-            return (base.ToString() + "has had their phone ring " + cellPhoneRings + " times while in the middle of a heist");
+            return (base.ToString() + "has had their phone ring " + cellPhoneRings + " times while in the middle of a heist\n");
+        }
+        
+        public void SmashPhone()
+        {
+            //Carmen smash
+            phoneSmash = true;
+            
         }
 
+        public override void GainXP(int exp)
+        {
+            base.GainXP(exp);
+            if ((xp-(level*200))/200 < 1)
+            {
+                if (dexterity < 20)
+                {
+                    dexterity++;
+                }
+            }
+        } 
+
+        public void Heist()
+        {
+            if (!phoneSmash)
+            {
+                if (rng.Next(1,xp) <= 10)
+                {
+                    cellPhoneRings++;
+                    //drat, I need to take this
+                }
+            }
+        }
 
 
 
