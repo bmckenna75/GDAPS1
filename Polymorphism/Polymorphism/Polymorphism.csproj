@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B6F006FD-D376-46C9-8622-58C9E6D9F3A3}</ProjectGuid>
+    <ProjectGuid>{E3E2A345-5F87-4CCF-9107-78BC1ED3B884}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Overriding</RootNamespace>
-    <AssemblyName>Overriding</AssemblyName>
+    <RootNamespace>Polymorphism</RootNamespace>
+    <AssemblyName>Polymorphism</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,13 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Barracks.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rogue.cs" />
-    <Compile Include="RPGChar.cs" />
-    <Compile Include="Warrior.cs" />
-    <Compile Include="Wizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

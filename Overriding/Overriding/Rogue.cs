@@ -25,6 +25,7 @@ namespace Overriding
         public Rogue(string n, int s, int d, int i, int cPR) : base(n, s, d, i)
         {
             cellPhoneRings = cPR;
+            Console.WriteLine("A Rogue has been spawned");
         }
 
         //general things
@@ -32,31 +33,31 @@ namespace Overriding
         {
             return (base.ToString() + "has had their phone ring " + cellPhoneRings + " times while in the middle of a heist\n");
         }
-        
+
         public void SmashPhone()
         {
             //Carmen smash
             phoneSmash = true;
-            
+
         }
 
         public override void GainXP(int exp)
         {
             base.GainXP(exp);
-            if ((xp-(level*200))/200 < 1)
+            if ((xp - (level * 200)) / 200 < 1)
             {
                 if (dexterity < 20)
                 {
                     dexterity++;
                 }
             }
-        } 
+        }
 
         public void Heist()
         {
             if (!phoneSmash)
             {
-                if (rng.Next(1,xp) <= 10)
+                if (rng.Next(1, (xp + 2)) <= 10)
                 {
                     cellPhoneRings++;
                     //drat, I need to take this

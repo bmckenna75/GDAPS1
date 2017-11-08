@@ -26,6 +26,7 @@ namespace Overriding
         public Warrior(string n, int s, int d, int i, int dWB) : base(n, s, d, i)
         {
             daysWithoutBath = dWB;
+            Console.WriteLine("A Warrior has been spawned");
         }
 
         //general things

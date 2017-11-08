@@ -26,6 +26,7 @@ namespace Overriding
         public Wizard(string n, int s, int d, int i, double hPP) : base(n, s, d, i)
         {
             hotPocketPercent = hPP;
+            Console.WriteLine("A Wizard has been spawned");
         }
 
         //general things
