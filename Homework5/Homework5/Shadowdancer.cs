@@ -9,12 +9,12 @@ namespace Homework5
     class Shadowdancer : CommonCharacter
     {
         //constructer
-
         protected bool stealth = false;
         protected bool highGround = true;
 
-        public Shadowdancer(int h, int d, int s, int i, int aC, bool Stealth, bool hG, Random r)
+        public Shadowdancer(string n, int h, int d, int s, int i, int aC, bool Stealth, bool hG) : base (n, h, d, s, i, aC)
         {
+            name = n;
             health = h;
             dexterity = d;
             strength = s;
@@ -22,42 +22,32 @@ namespace Homework5
             armorClass = aC;
             stealth = Stealth;
             highGround = hG;
-            Roller = r;
+            Random Roller = new Random();
 
         }
 
 
 
-        public Shadowdancer()
-        {
-            health = 11;
-            dexterity = 16;
-            strength = 14;
-            intelegence = 11;
-            armorClass = 13;
-            stealth = false;
-            highGround = true;
-            Roller = new Random();
-        }
+        public Shadowdancer() : this("Zera", 11 ,16, 14, 11, 13, false, true) { }
 
 
 
         public override string ToString()
         {
             return ("This Shadowdancer has a health of " + health + ", has a dex of " + dexterity + ", has a str of "
-                + strength + ", has an int of " + intelegence + " and has an armor class of " + armorClass);
+                + strength + ", has an int of " + intelegence + " and has an armor class of " + armorClass + "\nAlso his stealth is " + stealth + " and his claim to the high ground is " + highGround);
         }
 
         //generic methods
-        public int Attack(int defenderAC)
+        public override int Attack(int defenderAC)
         {
-            if (Roller.Next(1,21) >= defenderAC && !highGround)
+            if (Roller.Next(1, 21) >= defenderAC && !highGround)
             {
-                return Roller.Next(1,7);
+                return Roller.Next(1, 7);
             }
             else if (Roller.Next(1, 21) >= defenderAC && highGround)
             {
-                return (Roller.Next(1,7) * 2);
+                return (Roller.Next(1, 7) * 2);
             }
             else
             {
@@ -65,7 +55,7 @@ namespace Homework5
             }
         }
 
-        public int TakeDamage(int Damage)
+        public override int TakeDamage(int Damage)
         {
             if (!stealth)
             {
@@ -80,27 +70,20 @@ namespace Homework5
                 else
                 {
                     health = health - Damage;
-                    stealth = false;
-                    highGround = false;
+                    if (Damage != 0)
+                    {
+                        stealth = false;
+                        highGround = false;
+                    }
                 }
             }
             return health;
         }
 
-        public bool IsDead()
-        {
-            if (health <= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+
 
         //come back with your opponent's shield or on yours
-        public bool HasFled()
+        public override bool HasFled()
         {
             return false;
         }

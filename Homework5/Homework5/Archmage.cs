@@ -10,11 +10,16 @@ namespace Homework5
     {
         private bool focus = true;
         private int chargeLevel = 0;
+        public int ChargeLevel
+        {
+            get { return chargeLevel; }
+        }
         //constructer
 
 
-        public Archmage(int h, int d, int s, int i, int aC, int cL, bool f, Random r)
+        public Archmage(string n, int h, int d, int s, int i, int aC, int cL, bool f) : base(n, h, d, s, i, aC)
         {
+            name = n;
             health = h;
             dexterity = d;
             strength = s;
@@ -22,34 +27,31 @@ namespace Homework5
             armorClass = aC;
             chargeLevel = cL;
             focus = f;
-            Roller = r;
+            //Random Roller = new Random();
 
         }
 
-        public Archmage()
+        public Archmage() : this("Lei", 10, 13, 8, 14, 0, 0, true)
         {
-            health = 10;
-            dexterity = 13;
-            strength = 8;
-            intelegence = 17;
-            armorClass = 14;
-            chargeLevel = 0;
-            focus = true;
-            Roller = new Random();
+
         }
 
         public override string ToString()
         {
             return ("This Archmage has a health of " + health + ", has a dex of " + dexterity + ", has a str of "
-                + strength + ", has an int of " + intelegence + " and has an armor class of " + armorClass);
+                + strength + ", has an int of " + intelegence + " and has an armor class of " + armorClass + "\nHis focus is " +focus + " and has a charge level of " + chargeLevel );
         }
 
         //generic methods
-        public int Attack(int defenderAC)
+        public override int Attack(int defenderAC)
         {
             chargeLevel++;
             if (Roller.Next(1,21) >= defenderAC)
             {
+                if (focus== true)
+                {
+                    return Roller.Next(1, 13);
+                }
                 return Roller.Next(1,7);
             }
             else
@@ -58,26 +60,18 @@ namespace Homework5
             }
         }
 
-        public int TakeDamage(int Damage)
+        public override int TakeDamage(int Damage)
         {
             health = health - Damage;
-            focus = false;
+            if (Damage != 0)
+            {
+                focus = false;
+            }
             return health;
         }
 
-        public bool IsDead()
-        {
-            if (health <= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
         //the archmage shall not show fear before his lessers
-        public bool HasFled()
+        public override bool HasFled()
         {
             return false;
         }
