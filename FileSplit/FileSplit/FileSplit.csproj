@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CFF0071-074E-4BF8-A2E7-481245B8FED8}</ProjectGuid>
+    <ProjectGuid>{6D393CC4-9EB2-4438-8339-D43A36AB6206}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Homework5</RootNamespace>
-    <AssemblyName>Homework5</AssemblyName>
+    <RootNamespace>FileSplit</RootNamespace>
+    <AssemblyName>FileSplit</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archmage.cs" />
-    <Compile Include="CommonCharacter.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shadowdancer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

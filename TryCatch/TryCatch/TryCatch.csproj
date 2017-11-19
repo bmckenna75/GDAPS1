@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CFF0071-074E-4BF8-A2E7-481245B8FED8}</ProjectGuid>
+    <ProjectGuid>{973283BE-0D28-4DC3-A41D-3DC92558DC33}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Homework5</RootNamespace>
-    <AssemblyName>Homework5</AssemblyName>
+    <RootNamespace>TryCatch</RootNamespace>
+    <AssemblyName>TryCatch</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archmage.cs" />
-    <Compile Include="CommonCharacter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shadowdancer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
