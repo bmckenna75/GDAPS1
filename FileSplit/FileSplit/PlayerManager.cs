@@ -7,85 +7,90 @@ using System.IO;
 
 namespace FileSplit
 {
-	class PlayerManager
-	{
-		//field
-		protected List<Player> players;
+    class PlayerManager
+    {
+        //field
+        protected List<Player> players;
 
-		public PlayerManager()
-		{
-			players = new List<Player>();
-		}
+        public PlayerManager()
+        {
+            players = new List<Player>();
+        }
 
-		//methods
-		public void CreatePlayer(string n, int s, int h)
-		{
+        //methods
+        public void CreatePlayer(string n, int s, int h)
+        {
 
-			players.Add(new Player(n, s, h));
-			Console.WriteLine("Player, " + n + " created...");
-		}
+            players.Add(new Player(n, s, h));
+            Console.WriteLine("Player, " + n + " created...");
+        }
 
-		public void Print()
-		{
-			foreach (Player n in players)
-			{
-				Console.WriteLine(n.ToString());
-			}
-			if (players.Count == 0)
-			{
-				Console.WriteLine("There is no player data to print.");
-			}
-		}
+        public void Print()
+        {
+            foreach (Player n in players)
+            {
+                Console.WriteLine(n.ToString());
+            }
+            if (players.Count == 0)
+            {
+                Console.WriteLine("There is no player data to print.");
+            }
+        }
 
-		public void Load()
-		{
-			try
-			{
-				StreamReader list = new StreamReader("players.txt");
-				string data = null;
+        public void Load()
+        {
+            try
+            {
+                StreamReader list = new StreamReader("players.txt");
+                string data = null;
 
-				string[] values = new string[3];
-				do
-				{
-					data = list.ReadLine();
-					values = data.Split(',');
-					this.CreatePlayer(values[0], int.Parse(values[1]), int.Parse(values[2]));
-				}
-				while (data != null);
-				list.Close();
-			}
-			catch
-			{
-				Console.WriteLine("Error opening string, please consult developers.");
-			}
-		}
+                string[] values = new string[3];
+                do
+                {
+                    data = list.ReadLine();
+                    
 
-		public void Save()
-		{
-			try
-			{
-				StreamWriter output = new StreamWriter("players.txt");
-				if (players.Count == 0)
-				{
-					Console.WriteLine("There is nothing to write, please create player data and try again");
+                    if (data != null)
+                    {
+                        values = data.Split(',');
+                        this.CreatePlayer(values[0], int.Parse(values[1]), int.Parse(values[2]));
+                    }
+                }
+                while (data != null);
+                list.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
-				}
-				else
-				{
-					foreach(Player n in players)
-					{
-						output.WriteLine(n.Name + "," + n.Strength + "," + n.Health);
-					}
-					output.Close();
-				}
+        public void Save()
+        {
+            try
+            {
+                StreamWriter output = new StreamWriter("players.txt");
+                if (players.Count == 0)
+                {
+                    Console.WriteLine("There is nothing to write, please create player data and try again");
 
-			}
-			catch
-			{
-				Console.WriteLine("There was an issue with the specified file, no data written.");
-			}
-		}
+                }
+                else
+                {
+                    foreach (Player n in players)
+                    {
+                        output.WriteLine(n.Name + "," + n.Strength + "," + n.Health);
+                    }
+                    output.Close();
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine();
+            }
+        }
 
 
-	}
+    }
 }
