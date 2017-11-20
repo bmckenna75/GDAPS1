@@ -87,7 +87,7 @@ namespace FileSplit
             }
             catch (Exception e)
             {
-                Console.WriteLine();
+                Console.WriteLine(e.Message);
             }
         }
 

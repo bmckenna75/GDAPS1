@@ -25,6 +25,7 @@ namespace FileSplit
 					int str = int.Parse(Console.ReadLine());
 					Console.Write("  Health: ");
 					int health = int.Parse(Console.ReadLine());
+					Control.CreatePlayer(name, str, health);
 				}
 				else if (switcher == "print")
 				{

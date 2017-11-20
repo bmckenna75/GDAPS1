@@ -20,7 +20,17 @@ namespace Homework7
 			get { return alive; }
 			set { alive = value; }
 		}
-        public Cell() { }
+        public Cell(int n)
+		{
+			if (n == 1)
+			{
+				alive = true;
+			}
+			else if(n != 1)
+			{
+				alive = false;
+			}
+		}
 
         
         public override string ToString()

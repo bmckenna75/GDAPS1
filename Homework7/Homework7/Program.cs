@@ -12,11 +12,12 @@ namespace Homework7
         static void Main(string[] args)
         {
             Game Board = new Game();
+			bool switchOff = false;
 
-            bool switchOff = false;
+			Console.WriteLine("Welcome to the Game of Life!");
             while (switchOff == false)
             {
-                Console.WriteLine("Welcome to the Game of Life!\n\nOptions:\n1 - Generate a new board\n2 - Display Board\n3 - Quit");
+                Console.WriteLine("\n\nOptions:\n1 - Generate a new board\n2 - Display Board\n3 - Quit");
                 string swapper = Console.ReadLine().Trim().ToLower();
                 if (swapper == "1" || swapper == "generate")
                 {
