@@ -35,7 +35,16 @@ namespace Homework7
             {
                 for (int y = 0; y <= width-1; y++)
                 {
-                    Console.Write(currentBoard[i, y].ToString());
+					if (currentBoard[i,y].Alive == true)
+					{
+						Console.ForegroundColor = ConsoleColor.Green;
+					}
+					else if (currentBoard[i, y].Alive != true)
+					{
+						Console.ForegroundColor = ConsoleColor.Red;
+					}
+					Console.Write(currentBoard[i, y].ToString());
+					Console.ResetColor();
                     if (y == width-1)
                     {
                         Console.WriteLine();
