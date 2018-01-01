@@ -8,18 +8,41 @@ namespace Homework7
 {
     class Cell
     {
-        /*
+		/*
          * Chris/Dom, I'm very sorry you're going to have to grade this because it's going to be a train wreck.
          * 
          * It will work though and that's what matters.
          */
 
-        public Cell() { }
+		protected bool alive;
+		public bool Alive
+		{
+			get { return alive; }
+			set { alive = value; }
+		}
+        public Cell(int n)
+		{
+			if (n == 1)
+			{
+				alive = true;
+			}
+			else if(n != 1)
+			{
+				alive = false;
+			}
+		}
 
         
         public override string ToString()
         {
-            return "*";
+			if (alive == true)
+			{
+				return "#";
+			}
+			else
+			{
+				return "@";
+			}
         }
 
 

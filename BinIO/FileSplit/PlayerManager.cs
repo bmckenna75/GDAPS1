@@ -41,23 +41,22 @@ namespace FileSplit
         {
             try
             {
-                StreamReader list = new StreamReader("players.txt");
-                string data = null;
+				Stream inStream = File.OpenRead("players.data");
+				BinaryReader input = new BinaryReader(inStream);
 
                 string[] values = new string[3];
-                do
-                {
-                    data = list.ReadLine();
-                    
 
-                    if (data != null)
-                    {
-                        values = data.Split(',');
-                        this.CreatePlayer(values[0], int.Parse(values[1]), int.Parse(values[2]));
-                    }
-                }
-                while (data != null);
-                list.Close();
+				int numToLoad = input.ReadInt32();
+
+				for (int i = 0; i < numToLoad; i++)
+				{
+					string name = input.ReadString();
+					int str = input.ReadInt32();
+					int hp = input.ReadInt32();
+					this.CreatePlayer(name, str, hp);
+				}
+				input.Close();
+
             }
             catch (Exception e)
             {
@@ -69,7 +68,9 @@ namespace FileSplit
         {
             try
             {
-                StreamWriter output = new StreamWriter("players.txt");
+				Stream outStream = File.OpenWrite("players.data");
+				BinaryWriter output = new BinaryWriter(outStream);
+				
                 if (players.Count == 0)
                 {
                     Console.WriteLine("There is nothing to write, please create player data and try again");
@@ -77,9 +78,12 @@ namespace FileSplit
                 }
                 else
                 {
+					output.Write(players.Count);
                     foreach (Player n in players)
                     {
-                        output.WriteLine(n.Name + "," + n.Strength + "," + n.Health);
+						output.Write(n.Name);
+						output.Write(n.Strength);
+						output.Write(n.Health);
                     }
                     output.Close();
                 }

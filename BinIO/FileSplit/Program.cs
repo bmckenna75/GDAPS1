@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace FileSplit
 {
@@ -14,7 +15,7 @@ namespace FileSplit
 			bool exitVar = true;
 			while (exitVar == true)
 			{
-				Console.Write("Choose one of the following options: \nCreate.Print.Save.Load.Quit. \n>>");
+				Console.Write("Choose one of the following options: \nCreate. Print. Save. Load. Info. Quit. \n>>");
 				string switcher = Console.ReadLine().Trim().ToLower();
 				if (switcher == "create")
 				{
@@ -39,9 +40,21 @@ namespace FileSplit
 				{
 					Control.Load();
 				}
-				else if(switcher == "quit")
+				else if (switcher == "quit")
 				{
 					System.Environment.Exit(0);
+				}
+				else if (switcher == "info")
+				{
+					if (File.Exists("players.data"))
+					{
+						Console.WriteLine("The file players.data was created at " + File.GetCreationTime("players.data"));
+						Console.WriteLine("The file players.data was last accessed at at " + File.GetLastAccessTime("players.data"));
+					}
+					else
+					{
+						Console.WriteLine("Please create players.data first");
+					}
 				}
 				else
 				{
